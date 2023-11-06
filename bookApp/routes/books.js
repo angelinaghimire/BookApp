@@ -26,9 +26,10 @@ router.post('/saveEdited/:_id', function(req, res, next){
 router.get('/delete/:_id', function(req, res, next) {
   const deletedIndex = books.findIndex((book) => book._id === req.params._id);
   if (deletedIndex !== -1) {
-      books.splice(delIndex, 1);
+      books.splice(deletedIndex, 1);
       console.log(`Book with _id ${req.params._id} deleted`);
-  } else { console.log(`Book with _id ${req.params._id} not found`); }
+  } else { console
+    .log(`Book with _id ${req.params._id} not found`); }
 
   res.redirect('/');
 });
